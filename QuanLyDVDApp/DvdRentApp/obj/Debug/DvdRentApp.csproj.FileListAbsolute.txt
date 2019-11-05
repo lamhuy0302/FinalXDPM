@@ -108,3 +108,6 @@ D:\-n-XDPM\QuanLyDVDApp\DvdRentApp\bin\Debug\es\DevExpress.PivotGrid.v17.1.Core.
 D:\-n-XDPM\QuanLyDVDApp\DvdRentApp\bin\Debug\ja\DevExpress.PivotGrid.v17.1.Core.resources.dll
 D:\-n-XDPM\QuanLyDVDApp\DvdRentApp\bin\Debug\ru\DevExpress.PivotGrid.v17.1.Core.resources.dll
 D:\-n-XDPM\QuanLyDVDApp\DvdRentApp\obj\Debug\DvdRentApp.App.resources
+D:\FinalXDPM\QuanLyDVDApp\DvdRentApp\bin\Debug\DvdRentApp.exe.config
+D:\FinalXDPM\QuanLyDVDApp\DvdRentApp\obj\Debug\DvdRentApp.exe
+D:\FinalXDPM\QuanLyDVDApp\DvdRentApp\obj\Debug\DvdRentApp.pdb

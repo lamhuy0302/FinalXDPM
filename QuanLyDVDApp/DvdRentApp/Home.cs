@@ -202,6 +202,7 @@ namespace DvdRentApp
             tabCtrlInput.SelectedTab = tabPageTra;
             tabCtrlMenuTong.SelectedTab = tabPageMenuTra;
             dgvListTra.Rows.Clear();
+            lbTongTra.Text = "0";
             txtIdDvdTra.Clear();
             txtIdDvdTra.Focus();
         }
