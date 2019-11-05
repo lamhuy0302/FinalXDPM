@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.25" name="DvdRentDb">
+  <DataContextMoniker Name="/DvdRentDbDataContext" />
+  <nestedChildShapes>
+    <classShape Id="792ce20f-1828-4007-9147-216b76488183" absoluteBounds="6.25, 1.25, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DvdRentDbDataContext/ChiTietPhieuDatTruoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5dda6e5e-04ba-4827-aec6-94f19070080e" absoluteBounds="6.265, 1.71, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6222804b-e466-4a00-9115-421868d89ce3" absoluteBounds="3.5, 5.875, 2, 2.1554996744791675">
+      <DataClassMoniker Name="/DvdRentDbDataContext/Title" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a1702802-93c0-4090-8ba8-e9ebcaa04ee6" absoluteBounds="3.515, 6.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8057b801-ca55-4704-b672-742d1ee3187a" absoluteBounds="6.25, 4.25, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DvdRentDbDataContext/ChiTietPhieuMuon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="47f7c33e-8856-4049-9d72-1b4d572acbc2" absoluteBounds="6.265, 4.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5733e318-aa02-4db2-bba3-bba68e704bb9" absoluteBounds="3.5, 9.375, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DvdRentDbDataContext/DVD" />
+      <nestedChildShapes>
+        <elementListCompartment Id="7114ca55-a52a-4635-9c66-d7ba0755676b" absoluteBounds="3.515, 9.835, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="3994d348-f41e-435a-b876-5dfb8d463387" absoluteBounds="0.75, 2.25, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/DvdRentDbDataContext/KhachHang" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1f80e0e4-6fc8-4542-90ce-9da2275d124a" absoluteBounds="0.765, 2.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0a130819-f876-45fe-be6a-fca2fa4246fe" absoluteBounds="6.75, 7.75, 2, 1.7708968098958335">
+      <DataClassMoniker Name="/DvdRentDbDataContext/NhanVien" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69719ce0-422d-4124-bafe-fc12fbb125ad" absoluteBounds="6.765, 8.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6badb117-b694-4198-bdf5-979b6d228abf" absoluteBounds="3.5, 1.375, 2, 1.3862939453125003">
+      <DataClassMoniker Name="/DvdRentDbDataContext/PhieuDatTruoc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="382ad30f-5f71-4cd1-bc39-5507a4f6bbeb" absoluteBounds="3.515, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="14a4cb3c-d6d7-4599-96be-cc01c0489e42" absoluteBounds="3.5, 3.5, 2, 1.3862939453125005">
+      <DataClassMoniker Name="/DvdRentDbDataContext/PhieuMuon" />
+      <nestedChildShapes>
+        <elementListCompartment Id="79830507-9528-42d3-8d0a-5e4452206da8" absoluteBounds="3.515, 3.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 5.875); (5.875 : 5.5); (5.875 : 2.03929768880208); (6.25 : 2.03929768880208)]" fixedFrom="NotFixed" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DvdRentDbDataContext/Title/Title_ChiTietPhieuDatTruoc" />
+      <nodes>
+        <classShapeMoniker Id="6222804b-e466-4a00-9115-421868d89ce3" />
+        <classShapeMoniker Id="792ce20f-1828-4007-9147-216b76488183" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 10.26849609375); (6.46875 : 10.26849609375); (6.46875 : 6.02089680989583)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DvdRentDbDataContext/DVD/DVD_ChiTietPhieuMuon" />
+      <nodes>
+        <classShapeMoniker Id="5733e318-aa02-4db2-bba3-bba68e704bb9" />
+        <classShapeMoniker Id="8057b801-ca55-4704-b672-742d1ee3187a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.5 : 8.03049967447917); (4.5 : 9.375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DvdRentDbDataContext/Title/Title_DVD" />
+      <nodes>
+        <classShapeMoniker Id="6222804b-e466-4a00-9115-421868d89ce3" />
+        <classShapeMoniker Id="5733e318-aa02-4db2-bba3-bba68e704bb9" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.46279581705729); (5.79166666666667 : 2.46279581705729 : JumpStart); (5.95833333333333 : 2.46279581705729 : JumpEnd); (6.25 : 2.46279581705729)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DvdRentDbDataContext/PhieuDatTruoc/PhieuDatTruoc_ChiTietPhieuDatTruoc" />
+      <nodes>
+        <classShapeMoniker Id="6badb117-b694-4198-bdf5-979b6d228abf" />
+        <classShapeMoniker Id="792ce20f-1828-4007-9147-216b76488183" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 2.50564697265625); (3.5 : 2.50564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DvdRentDbDataContext/KhachHang/KhachHang_PhieuDatTruoc" />
+      <nodes>
+        <classShapeMoniker Id="3994d348-f41e-435a-b876-5dfb8d463387" />
+        <classShapeMoniker Id="6badb117-b694-4198-bdf5-979b6d228abf" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 4.56814697265625); (5.79166666666667 : 4.56814697265625 : JumpStart); (5.95833333333333 : 4.56814697265625 : JumpEnd); (6.25 : 4.56814697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DvdRentDbDataContext/PhieuMuon/PhieuMuon_ChiTietPhieuMuon" />
+      <nodes>
+        <classShapeMoniker Id="14a4cb3c-d6d7-4599-96be-cc01c0489e42" />
+        <classShapeMoniker Id="8057b801-ca55-4704-b672-742d1ee3187a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.76044840494792); (3.5 : 3.76044840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DvdRentDbDataContext/KhachHang/KhachHang_PhieuMuon" />
+      <nodes>
+        <classShapeMoniker Id="3994d348-f41e-435a-b876-5dfb8d463387" />
+        <classShapeMoniker Id="14a4cb3c-d6d7-4599-96be-cc01c0489e42" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,6 @@
+D:\-n-XDPM\QuanLyDVDApp\DAL\bin\Debug\DAL.dll.config
+D:\-n-XDPM\QuanLyDVDApp\DAL\bin\Debug\DAL.dll
+D:\-n-XDPM\QuanLyDVDApp\DAL\bin\Debug\DAL.pdb
+D:\-n-XDPM\QuanLyDVDApp\DAL\obj\Debug\DAL.dll
+D:\-n-XDPM\QuanLyDVDApp\DAL\obj\Debug\DAL.pdb
+D:\-n-XDPM\QuanLyDVDApp\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

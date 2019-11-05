@@ -1,0 +1,9 @@
+D:\-n-XDPM\QuanLyDVDApp\BLL\bin\Debug\BLL.dll
+D:\-n-XDPM\QuanLyDVDApp\BLL\bin\Debug\BLL.pdb
+D:\-n-XDPM\QuanLyDVDApp\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\-n-XDPM\QuanLyDVDApp\BLL\obj\Debug\BLL.dll
+D:\-n-XDPM\QuanLyDVDApp\BLL\obj\Debug\BLL.pdb
+D:\-n-XDPM\QuanLyDVDApp\BLL\bin\Debug\DAL.dll
+D:\-n-XDPM\QuanLyDVDApp\BLL\bin\Debug\Entities.dll
+D:\-n-XDPM\QuanLyDVDApp\BLL\bin\Debug\DAL.pdb
+D:\-n-XDPM\QuanLyDVDApp\BLL\bin\Debug\Entities.pdb

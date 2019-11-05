@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Data_XDPM" Class="DvdRentDbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-HH9V351R\HUYSERVER;Initial Catalog=Data_XDPM;Integrated Security=True" SettingsObjectName="DAL.Properties.Settings" SettingsPropertyName="Data_XDPMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ChiTietPhieuDatTruoc" Member="ChiTietPhieuDatTruocs">
+    <Type Name="ChiTietPhieuDatTruoc">
+      <Column Name="IdPhieuDatTruoc" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdTitle" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Huy" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Title_ChiTietPhieuDatTruoc" Member="Title" ThisKey="IdTitle" OtherKey="Id" Type="Title" IsForeignKey="true" />
+      <Association Name="PhieuDatTruoc_ChiTietPhieuDatTruoc" Member="PhieuDatTruoc" ThisKey="IdPhieuDatTruoc" OtherKey="Id" Type="PhieuDatTruoc" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Title" Member="Titles">
+    <Type Name="Title">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="TheLoai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Gia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhiTre" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThoiGianThue" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="Title_ChiTietPhieuDatTruoc" Member="ChiTietPhieuDatTruocs" ThisKey="Id" OtherKey="IdTitle" Type="ChiTietPhieuDatTruoc" />
+      <Association Name="Title_DVD" Member="DVDs" ThisKey="Id" OtherKey="IdTitle" Type="DVD" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ChiTietPhieuMuon" Member="ChiTietPhieuMuons">
+    <Type Name="ChiTietPhieuMuon">
+      <Column Name="IdPhieuMuon" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="IdDVD" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NgayTra" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="PhiTre" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TinhTrang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="DVD_ChiTietPhieuMuon" Member="DVD" ThisKey="IdDVD" OtherKey="Id" Type="DVD" IsForeignKey="true" />
+      <Association Name="PhieuMuon_ChiTietPhieuMuon" Member="PhieuMuon" ThisKey="IdPhieuMuon" OtherKey="Id" Type="PhieuMuon" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.DVD" Member="DVDs">
+    <Type Name="DVD">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdTitle" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="DVD_ChiTietPhieuMuon" Member="ChiTietPhieuMuons" ThisKey="Id" OtherKey="IdDVD" Type="ChiTietPhieuMuon" />
+      <Association Name="Title_DVD" Member="Title" ThisKey="IdTitle" OtherKey="Id" Type="Title" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.KhachHang" Member="KhachHangs">
+    <Type Name="KhachHang">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Sdt" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="TrangThai" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="KhachHang_PhieuDatTruoc" Member="PhieuDatTruocs" ThisKey="Id" OtherKey="IdKhachHang" Type="PhieuDatTruoc" />
+      <Association Name="KhachHang_PhieuMuon" Member="PhieuMuons" ThisKey="Id" OtherKey="IdKhachHang" Type="PhieuMuon" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhanVien" Member="NhanViens">
+    <Type Name="NhanVien">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Ten" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+      <Column Name="Sdt" Type="System.String" DbType="NVarChar(40)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuDatTruoc" Member="PhieuDatTruocs">
+    <Type Name="PhieuDatTruoc">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdKhachHang" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayTao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PhieuDatTruoc_ChiTietPhieuDatTruoc" Member="ChiTietPhieuDatTruocs" ThisKey="Id" OtherKey="IdPhieuDatTruoc" Type="ChiTietPhieuDatTruoc" />
+      <Association Name="KhachHang_PhieuDatTruoc" Member="KhachHang" ThisKey="IdKhachHang" OtherKey="Id" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PhieuMuon" Member="PhieuMuons">
+    <Type Name="PhieuMuon">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="IdKhachHang" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NgayTao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="PhieuMuon_ChiTietPhieuMuon" Member="ChiTietPhieuMuons" ThisKey="Id" OtherKey="IdPhieuMuon" Type="ChiTietPhieuMuon" />
+      <Association Name="KhachHang_PhieuMuon" Member="KhachHang" ThisKey="IdKhachHang" OtherKey="Id" Type="KhachHang" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

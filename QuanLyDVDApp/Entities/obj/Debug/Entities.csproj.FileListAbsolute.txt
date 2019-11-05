@@ -1,0 +1,5 @@
+D:\-n-XDPM\QuanLyDVDApp\Entities\bin\Debug\Entities.dll
+D:\-n-XDPM\QuanLyDVDApp\Entities\bin\Debug\Entities.pdb
+D:\-n-XDPM\QuanLyDVDApp\Entities\obj\Debug\Entities.dll
+D:\-n-XDPM\QuanLyDVDApp\Entities\obj\Debug\Entities.pdb
+D:\-n-XDPM\QuanLyDVDApp\Entities\obj\Debug\Entities.csprojResolveAssemblyReference.cache
